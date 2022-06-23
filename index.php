@@ -14,7 +14,7 @@ try {
 
         switch ($url[0]) {
             case "accueil":
-                require "view/homageView.php";
+                require "view/homepageView.php";
                 break;
 
             case "inscription":
