@@ -5,7 +5,11 @@ session_start();
 define("URL", str_replace("index.php", "", (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"]));
 
 try {
-    // TODO : mettre ici les instances de controllers dont j'aurai besoin
+    require "controller/ConnardController.php";
+    // require "controller/UserController.php";
+
+    $connardController = new ConnardController;
+    // $userController = new UserController;
 
     if (empty($_GET["page"])) {
         require "view/homepageView.php";
@@ -41,6 +45,7 @@ try {
             case "connards":
                 if (count($url) === 1) {
                     // TODO : appeler ici la méthode pour afficher tous les connards listés
+                    $connardController->displayConnards();
                     break;
                 } else {
                     switch ($url[1]) {
@@ -49,6 +54,7 @@ try {
                             break;
                         case "ajouter":
                             // TODO : appeler ici la méthode pour ajouter un connard
+                            // TODO : créer la vue pour afficher le formulaire d'ajout de connard
                             break;
                         case "valider":
                             // TODO : appeler ici la méthode pour valider l'ajout en BDD du connard + retour vers la page d'accueil + boite dial success

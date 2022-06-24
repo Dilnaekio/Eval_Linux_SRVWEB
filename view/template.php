@@ -24,7 +24,7 @@
     }
     ?>
 
-    <main>
+    <main class="container">
         <?php
         // $content est la variable contenant tout le corps HTML des autres views
         echo $content;

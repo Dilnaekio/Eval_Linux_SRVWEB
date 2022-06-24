@@ -23,7 +23,7 @@ class ConnardManager extends Model{
 
     public function addConnard($connard)
     {
-        $this->connardList[] = $connard;
+        $this->connardsList[] = $connard;
     }
 
     public function getConnardsList()
@@ -59,6 +59,23 @@ class ConnardManager extends Model{
         ]);
     }
 
-    // TODO : faire méthode : addVote
-    // TODO : faire méthode : addVictory
+    public function updateVote($id, $nb_votes)
+    {
+        $sql = "UPDATE connards set nb_votes = :nb_votes where id = :id";
+        $req = $this->getDB()->prepare($sql);
+        $req->execute([
+            ":id" => $id,
+            ":nb_votes" => $nb_votes
+        ]);
+    }
+
+    public function updateVictories($id, $nb_victories)
+    {
+        $sql = "UPDATE connards set nb_victories = :nb_victories where id = :id";
+        $req = $this->getDB()->prepare($sql);
+        $req->execute([
+            ":id" => $id,
+            ":nb_victories" => $nb_victories
+        ]);
+    }
 }
