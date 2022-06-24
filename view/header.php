@@ -11,6 +11,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="<?= URL ?>connards">Connards</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="<?= URL ?>vote">Voter !</a>
+                </li>
             </ul>
         </div>
     </nav>

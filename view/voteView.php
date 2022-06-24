@@ -6,25 +6,25 @@ $title = "Lequel est deux est le plus gros c*nnard ?";
 <section>
     <article class="card" style="width: 18rem;">
         <figure>
-            <img src="<?= $pathFile . $firstConnard->getImg(); ?>" class="card-img-top" alt="<?= $firstConnard->getName(); ?>">
+            <img src="<?= $pathFile . $versus[0]->getImg(); ?>" class="card-img-top" alt="<?= $versus[0]->getName(); ?>">
         </figure>
 
         <div class="card-body">
-            <h5 class="card-title"><?= $firstConnard->getName(); ?></h5>
-            <p class="card-text"><?= $firstConnard->getRanking(); ?></p>
-            <a href="<?=URL?>vote/<?= $firstConnard->getId(); ?>" class="btn btn-primary">Voter</a>
+            <h5 class="card-title"><?= $versus[0]->getName(); ?></h5>
+            <p class="card-text"><?= $versus[0]->getRanking(); ?></p>
+            <a href="<?=URL?>vote/<?= $versus[0]->getId(); ?>" class="btn btn-primary">Voter</a>
         </div>
     </article>
 
     <article class="card" style="width: 18rem;">
         <figure>
-            <img src="<?= $pathFile . $secondConnard->getImg(); ?>" class="card-img-top" alt="<?= $secondConnard->getName(); ?>">
+            <img src="<?= $pathFile . $versus[1]->getImg(); ?>" class="card-img-top" alt="<?= $versus[1]->getName(); ?>">
         </figure>
 
         <div class="card-body">
-            <h5 class="card-title"><?= $secondConnard->getName(); ?></h5>
-            <p class="card-text"><?= $secondConnard->getRanking(); ?></p>
-            <a href="<?=URL?>vote/<?= $secondConnard->getId(); ?>" class="btn btn-primary">Voter</a>
+            <h5 class="card-title"><?= $versus[1]->getName(); ?></h5>
+            <p class="card-text"><?= $versus[1]->getRanking(); ?></p>
+            <a href="<?=URL?>vote/<?= $versus[1]->getId(); ?>" class="btn btn-primary">Voter</a>
         </div>
     </article>
 

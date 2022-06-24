@@ -69,6 +69,7 @@ try {
             case "vote":
                 if (count($url) === 1) {
                     // TODO : mettre ici les méthodes affichant deux connards RANDOM
+                    $connardController->displayVersus();
                     break;
                 } else {
                     // TODO : appeler ici la méthode pour ajouter un vote au connard en fonction de son ID stocké dans $url[2]

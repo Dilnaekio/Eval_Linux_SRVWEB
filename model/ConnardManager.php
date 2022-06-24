@@ -5,6 +5,7 @@ require "ConnardClass.php";
 
 class ConnardManager extends Model{
     private $connardsList;
+    private $usedConnardsList;
 
     public function loadConnards()
     {
@@ -26,9 +27,24 @@ class ConnardManager extends Model{
         $this->connardsList[] = $connard;
     }
 
+    public function addConnardInUsedList($connard)
+    {
+        $this->usedConnardsList[] = $connard;
+    }
+
+    public function resetLists()
+    {
+        $this->usedConnardsList = [];
+    }
+
     public function getConnardsList()
     {
         return $this->connardsList;
+    }
+
+    public function getUsedList()
+    {
+        return $this->usedConnardsList;
     }
 
     public function getConnardById($id)
